@@ -49,6 +49,7 @@ const Login = (props) => {
       setEmail('');
       setPass('');
       setError(null);
+      props.history.push('/admin');
     } catch (error) {
       console.log(error);
       if (error.code === 'auth/invalid-email') {
@@ -63,7 +64,7 @@ const Login = (props) => {
         setError('Contraseña incorrecta');
       }
     }
-  }, [email, pass]);
+  }, [email, pass, props.history]);
 
   const registrar = useCallback(async () => {
     try {
@@ -77,6 +78,7 @@ const Login = (props) => {
       setEmail('');
       setPass('');
       setError(null);
+      props.history.push('/admin');
     } catch (error) {
       console.log(error);
       if (error.code === 'auth/invalid-email') {
@@ -86,7 +88,7 @@ const Login = (props) => {
         setError('Email ya cadastrado');
       }
     }
-  }, [email, pass]);
+  }, [email, pass, props.history]);
 
   return (
     <div className="mt-5">

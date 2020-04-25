@@ -33,7 +33,7 @@ const Navbar = ({ firebaseUser, ...props }) => {
             </button>
           ) : (
             <NavLink className="btn btn-dark mr-2" to="/login">
-              Login
+              Registro / Login
             </NavLink>
           )}
         </div>
